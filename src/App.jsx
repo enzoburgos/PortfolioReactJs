@@ -3,7 +3,7 @@
 function App() {
   return (
     <div>
-      hola
+      hola mundo
     </div>
   );
 }
