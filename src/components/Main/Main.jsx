@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { Inicio, Sobremi } from '../../components'
+import { Inicio, Servicios, Sobremi } from '../../components'
 
 const Main = () => {
     return(
         <>
         <Inicio/>
         <Sobremi/>
+        <Servicios/>
         </>
     )
 }
