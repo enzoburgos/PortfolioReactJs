@@ -1,8 +1,10 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { Boton } from "../Boton/Boton";
+import { Boton } from '../../components'
 
-import logo from "../../assets/imagenes/logo192.png";
+import proyecto1 from "../../assets/img/proyecto1.png"
+import proyecto2 from '../../assets/img/proyecto2.png'
+import proyecto3 from '../../assets/img/proyecto3.png'
 
 const Portfolio = () => {
   const estiloPortfolio = {
@@ -20,12 +22,12 @@ const Portfolio = () => {
         <Boton text="Tablet" />
         <Boton text="Móvil" />
       </Box>
-      <Image width="100" src={logo} />
-      <Image width="100" src={logo} />
-      <Image width="100" src={logo} />
-      <Image width="100" src={logo} />
-      <Image width="100" src={logo} />
-      <Image width="100" src={logo} />
+      <Image width="100" src={proyecto1} />
+      <Image width="100" src={proyecto2} />
+      <Image width="100" src={proyecto3} />
+      <Image width="100" src={proyecto1} />
+      <Image width="100" src={proyecto2} />
+      <Image width="100" src={proyecto3} />
     </Box>
   );
 };

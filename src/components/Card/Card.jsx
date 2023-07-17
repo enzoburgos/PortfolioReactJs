@@ -11,7 +11,7 @@ const estilocard= {
 
   return (
     <Box sx={estilocard}>
-        <Image width='10' src={require(`../../assets/imagenes/${img}.png`)}/>
+        <Image width='10' src={require(`../../assets/fonts/icons8-${img}.png`)}/>
         <Text as='h2'>{titulo}</Text>
         <Text>{descripcion}</Text>
     </Box>

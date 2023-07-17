@@ -1,13 +1,10 @@
 import { Box, Text, Flex } from "@chakra-ui/react";
 import React from "react";
-// import { Boton } from "../Boton/Boton";
-// import { Formulario } from "../Formulario/Formulario";
-// import { Info } from "../Info/Info";
 
 import { Boton, Formulario, Info } from "../../components";
 
 const Contactame = () => {
-    
+
   // ---------estilos----------
   const estiloContactame = {
     bg: "lightyellow",

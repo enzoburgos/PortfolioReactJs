@@ -1,5 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import logo from "../../assets/imagenes/logo192.png";
+
+import perfil from "../../assets/img/fotoperf.png";
 
 const Sobremi = () => {
   const estilosobremi = {
@@ -20,7 +21,7 @@ const Sobremi = () => {
         </Text>
       </Box>
       <Box>
-        <Image src={logo} />
+        <Image src={perfil} />
       </Box>
     </Box>
   );

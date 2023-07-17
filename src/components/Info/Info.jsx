@@ -1,14 +1,14 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
-import logo from '../../assets/imagenes/logo192.png'
+import icono from '../../assets/fonts/icons8-base-de-datos.png'
 
 const Info = ({ titulo, info }) => {
   return (
     <>
       <Text as="h3">{titulo}</Text>
       <Flex>
-        <Image src={logo} width='5'/>
+        <Image src={icono} width='5'/>
         <Text>{info}</Text>
       </Flex>
     </>

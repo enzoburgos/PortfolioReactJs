@@ -1,7 +1,7 @@
 import { Flex, Image } from '@chakra-ui/react';
 import React from 'react';
 
-import logo from '../../assets/imagenes/logo192.png'
+import icono from '../../assets/fonts/icons8-base-de-datos.png'
 
 const Redes = () => {
 
@@ -17,11 +17,11 @@ const estiloRedes = {
     return(
         
         <Flex justifyContent='center'>
-        <Image src={logo} sx={estiloRedes}/>
-        <Image src={logo} sx={estiloRedes}/>
-        <Image src={logo} sx={estiloRedes}/>
-        <Image src={logo} sx={estiloRedes}/>
-        <Image src={logo} sx={estiloRedes}/>
+        <Image src={icono} sx={estiloRedes}/>
+        <Image src={icono} sx={estiloRedes}/>
+        <Image src={icono} sx={estiloRedes}/>
+        <Image src={icono} sx={estiloRedes}/>
+        <Image src={icono} sx={estiloRedes}/>
         </Flex>
     )
 }
