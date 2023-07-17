@@ -1,0 +1,8 @@
+export { Header } from './Header/Header'
+export { Main } from './Main/Main'
+export { Footer } from './Footer/Footer'
+export { Logo } from './Logo/Logo'
+export { Navbar } from './Navbar/Navbar'
+export { Boton } from './Boton/Boton'
+export { Inicio } from './Inicio/Inicio'
+export { Sobremi } from './Sobremi/Sobremi'

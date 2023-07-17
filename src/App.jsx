@@ -1,10 +1,12 @@
-
+import { Header, Main, Footer } from "./components";
 
 function App() {
   return (
-    <div>
-      hola mundo
-    </div>
+    <>
+      <Header />
+      <Main/>
+      <Footer />
+    </>
     
   );
 }
