@@ -50,7 +50,7 @@ const Servicios = () => {
 
   return (
     <Box id="servicios" as="section" sx={estiloservicios}>
-      <Text as="h2" fontSize={25}>Servicios</Text>
+      <Text as="h2" fontSize={25} textAlign='center'>Servicios</Text>
 
       {servicios.map((serv) => (
         <Card
