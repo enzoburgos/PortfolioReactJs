@@ -5,8 +5,9 @@ const Logo = () => {
 
 // ------estilos------
 const estilologo = {
-
-    fontSize:20
+    
+    color:'#AA8C55',
+    fontSize:'20'
   
   }  
     return(

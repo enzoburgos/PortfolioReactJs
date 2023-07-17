@@ -7,7 +7,7 @@ import Escritorio from "../../assets/img/Escritorio.jpg";
 const Inicio = () => {
   // ------estilos-------
   const estiloinicio = {
-    bg: "lightgreen",
+    // bg: "lightgreen",
     // height: "92vh",
     // justifyContent: "center",
     // textAlign: "center",
@@ -21,12 +21,12 @@ const Inicio = () => {
       id="inicio"
       as="section"
       sx={estiloinicio}
-      // bgImage={logo}
-      // bgPosition="center"
-      // bgRepeat="no-repeat"
-      // bgSize='cover'
+      bgImage={Escritorio}
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      bgSize='cover'
     >
-      <Box bgImage={Escritorio} textAlign='center' bgRepeat='no-repeat' bgSize='cover' bgPosition='center'>
+      <Box>
         <Text fontSize="2vw">Mi Nombre es</Text>
         <Text fontSize="6vw">Enzo Burgos</Text>
         <Text fontSize="2vw">Soy un Full Stack Developer </Text>

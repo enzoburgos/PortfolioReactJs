@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 
 import { Boton, Logo, Navbar } from '../../components'
 
@@ -7,12 +7,15 @@ const Header = () => {
 
 // ----------estilos----------
 const estiloheader = {
-    bg: 'lightblue',
-    // color: 'black',
-    // height: '3.4em',
-    // display: 'flex',
-    // alignItems:'center',
-    // justifyContent:'space-between',
+    height : '3.5rem',
+    bg: '#181818',
+    display: 'flex',
+    alignItems: 'center',
+    position: 'fixed',
+    width: '100%',
+    justifyContent: 'space-between',
+    pr:'5.5rem',
+    pl:'5.5rem'
     // ':hover': {
     //   bg: 'lightpink',
     // }
@@ -20,8 +23,10 @@ const estiloheader = {
   return (
     <Box as="header" sx={estiloheader}>
       <Logo />
+      <Flex alignItems='center'> 
       <Navbar />
       <Boton text="Contáctame" />
+      </Flex>
     </Box>
   );
 };

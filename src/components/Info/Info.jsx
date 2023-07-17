@@ -3,6 +3,9 @@ import React from "react";
 
 import icono from '../../assets/fonts/icons8-base-de-datos.png'
 
+// import { PhoneIcon} from '@chakra-ui/icons'
+
+
 const Info = ({ titulo, info }) => {
   return (
     <>
