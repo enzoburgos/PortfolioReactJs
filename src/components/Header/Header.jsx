@@ -23,9 +23,9 @@ const estiloheader = {
   return (
     <Box as="header" sx={estiloheader}>
       <Logo />
-      <Flex alignItems='center'> 
+      <Flex alignItems='center' > 
       <Navbar />
-      <Boton text="Contáctame" />
+      <Boton text="Contáctame" bg='#AA8C55' pr='' pl=''/>
       </Flex>
     </Box>
   );
