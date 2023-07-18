@@ -4,20 +4,16 @@ import perfil from "../../assets/img/fotoperf.png";
 
 const Sobremi = () => {
   // ---------estilos----------
-  const estilosobremi = {
-    bg: "lightyellow",
-    display: "flex",
-  };
-
   const estiloinfo = {
     p: "5.5rem 6rem 6rem 5.5rem",
     bg: "#181818",
-    color: "#878787",
+    color: "#878787", 
+    width:"50%"
   };
 
   return (
-    <Flex id="sobre-mi" as="section" sx={estilosobremi}>
-      <Box sx={estiloinfo} width="50%">
+    <Flex id="sobre-mi" as="section">
+      <Box sx={estiloinfo}>
         <Text as="h2" fontSize="25" pb="1rem">
           Sobre Mi
         </Text>
