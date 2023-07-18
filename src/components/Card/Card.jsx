@@ -8,7 +8,7 @@ const Card = ({ titulo, descripcion, img }) => {
     bg: "#121212",
     borderBottom: "#AA8C55 2px solid",
     p: "2.2rem 1.3rem",
-    width: "32%",
+    width: "32.1%",
     // height:'20rem'
   };
 
@@ -25,7 +25,7 @@ const Card = ({ titulo, descripcion, img }) => {
         sx={estiloicono}
         src={require(`../../assets/fonts/icons8-${img}.png`)}
       />
-      <Text as="h2" lineHeight='2rem'>{titulo}</Text>
+      <Text as="h2" lineHeight='2.5rem'>{titulo}</Text>
       <Text fontSize=".8rem" color="#878787">
         {descripcion}
       </Text>

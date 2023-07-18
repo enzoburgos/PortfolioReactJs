@@ -51,8 +51,8 @@ const Servicios = () => {
   ];
 
   return (
-    <Box bg="#0A0A0A">
-      <Box id="servicios" as="section" sx={estiloservicios}>
+    <Box as="section" id="servicios" bg="#0A0A0A" >
+      <Box sx={estiloservicios}>
         <Text
           as="h2"
           fontSize={25}

@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Button, Flex } from '@chakra-ui/react'
 
-import { Boton, Logo, Navbar } from '../../components'
+import { Logo, Navbar } from '../../components'
 
 const Header = () => {
 
@@ -20,12 +20,22 @@ const estiloheader = {
     //   bg: 'lightpink',
     // }
 }
+
+const estiloboton = {
+
+  color:'white',
+  bg:'#AA8C55',
+  borderRadius:'1px solid black',
+  p:'0 1rem'
+
+}
+
   return (
     <Box as="header" sx={estiloheader}>
       <Logo />
       <Flex alignItems='center' > 
       <Navbar />
-      <Boton text="Contáctame" bg='#AA8C55' pr='' pl=''/>
+      <Button variant="unstyled" sx={estiloboton} >Contáctame</Button>
       </Flex>
     </Box>
   );
