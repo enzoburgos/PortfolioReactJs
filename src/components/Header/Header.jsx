@@ -25,8 +25,26 @@ const estiloboton = {
 
   color:'white',
   bg:'#AA8C55',
-  borderRadius:'1px solid black',
+  borderRadius:'1',
   p:'0 1rem'
+
+}
+
+// const estiloform = {
+
+//   position:'absolute',
+//  top:'0',
+//  left:'0',
+//  justifyContent:'center'
+
+// }
+
+// ----------interacciones---------
+
+function botoncontactame() {
+  
+
+console.log('formulario');
 
 }
 
@@ -35,9 +53,12 @@ const estiloboton = {
       <Logo />
       <Flex alignItems='center' > 
       <Navbar />
-      <Button variant="unstyled" sx={estiloboton} >Contáctame</Button>
+      <Button variant="unstyled" sx={estiloboton} onClick={botoncontactame} >Contáctame</Button>
       </Flex>
     </Box>
+
+
+
   );
 };
 

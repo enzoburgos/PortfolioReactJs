@@ -6,7 +6,7 @@ const Boton = ({ text, bg, color }) => {
     p:'.4rem 2rem',
     color: `${color}`,
     bg : `${bg}`,
-    borderRadius: ".1rem",
+    borderRadius: "2",
   };
 
   return (

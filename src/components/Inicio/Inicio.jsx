@@ -2,8 +2,6 @@ import React from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
 // import { Boton } from "../../components";
 
-import "./Inicio.css";
-
 import Escritorio from "../../assets/img/Escritorio.jpg";
 
 const Inicio = () => {
@@ -22,7 +20,7 @@ const Inicio = () => {
     // fontSize: "calc(1em + 1vw)",
   };
 
-  const estilobotonuno = {
+  const botontrabajo = {
     color: "white",
     bg: "transparent",
     borderRadius: ".2rem",
@@ -33,7 +31,7 @@ const Inicio = () => {
     mr:'.7rem'
   };
 
-  const estilobotondos = {
+  const botoncontratame = {
 
     color: "white",
     bg: "#AA8C55",
@@ -57,8 +55,8 @@ const Inicio = () => {
         <Text fontSize="2.2vw" color="#AA8C55" mb="1.3rem">
           Soy un Full Stack Developer
         </Text>
-        <Button variant="unstyled" sx={estilobotonuno}>Ver Trabajos</Button>
-        <Button variant='unstyled' sx={estilobotondos}> Contratame </Button>
+        <Button variant="unstyled" sx={botontrabajo}>Ver Trabajos</Button>
+        <Button variant='unstyled' sx={botoncontratame}> Contratame </Button>
       </Box>
     </Box>
   );

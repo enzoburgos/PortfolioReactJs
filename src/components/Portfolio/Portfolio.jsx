@@ -14,13 +14,12 @@ const Portfolio = () => {
     pb: "5.5em",
   };
 
-const estiloimg = {
-
-  height: '38vh',
-  width:"26.5vw",
-objectFit:'cover'
-
-}
+  const estiloimg = {
+    height: "38vh",
+    width: "26.5vw",
+    objectFit: "cover",
+    borderRadius:'1'
+  };
 
   return (
     <Box id="portfolio" as="section" bg="#0A0A0A">
@@ -34,13 +33,13 @@ objectFit:'cover'
         >
           Portfolio
         </Text>
-        <Flex justifyContent="center" mb='2.5rem'>
+        <Flex justifyContent="center" mb="2.5rem">
           <Boton text="Todos" bg="#AA8C55" color="white" />
           <Boton text="Escritorio" color="#878787" />
           <Boton text="Tablet" color="#878787" />
           <Boton text="Móvil" color="#878787" />
         </Flex>
-        <Flex flexWrap='wrap' gap='1rem .6rem' >
+        <Flex flexWrap="wrap" gap="1rem .6rem">
           <Image sx={estiloimg} src={proyecto1} alt="proyecto 1" />
           <Image sx={estiloimg} src={proyecto2} alt="proyecto 2" />
           <Image sx={estiloimg} src={proyecto3} alt="proyecto 3" />

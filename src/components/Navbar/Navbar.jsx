@@ -7,6 +7,7 @@ const Navbar = () => {
     color: "#878787",
     fontSize: "1rem",
     p: "1.15rem 1rem 0.9rem 1rem",
+    // transition: 'all 0.5s'
   };
   return (
     <Box as="nav" pr="2rem">
