@@ -1,25 +1,35 @@
 import { Box, Link } from "@chakra-ui/react";
 
 const Navbar = () => {
-
-// ------estilos------
+  // ------estilos------
 
   const estilolink = {
-    
-    color:'#878787',
-    fontSize:'1rem',
-    p: '1.15rem 1rem 0.9rem 1rem',
-    
+    color: "#878787",
+    fontSize: "1rem",
+    p: "1.15rem 1rem 0.9rem 1rem",
   };
-
   return (
-    <Box as="nav" pr='2rem'>
-
-      <Link sx={estilolink} href="#inicio">Inicio</Link>
-      <Link sx={estilolink} href="#sobre-mi" >Sobre Mi</Link>
-      <Link sx={estilolink} href="#servicios" >Servicios</Link>
-      <Link sx={estilolink} href="#portfolio" >Proyectos</Link>
-
+    <Box as="nav" pr="2rem">
+      <Link sx={estilolink} style={{ textDecoration: "none" }} href="#inicio">
+        Inicio
+      </Link>
+      <Link sx={estilolink} style={{ textDecoration: "none" }} href="#sobre-mi">
+        Sobre Mi
+      </Link>
+      <Link
+        sx={estilolink}
+        style={{ textDecoration: "none" }}
+        href="#servicios"
+      >
+        Servicios
+      </Link>
+      <Link
+        sx={estilolink}
+        style={{ textDecoration: "none" }}
+        href="#portfolio"
+      >
+        Proyectos
+      </Link>
     </Box>
   );
 };
