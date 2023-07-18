@@ -9,7 +9,6 @@ const Card = ({ titulo, descripcion, img }) => {
     borderBottom: "#AA8C55 2px solid",
     p: "2.2rem 1.3rem",
     width: "32.1%",
-    // height:'20rem'
   };
 
   const estiloicono = {

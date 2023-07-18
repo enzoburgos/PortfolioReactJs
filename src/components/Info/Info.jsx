@@ -1,17 +1,20 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-import icono from '../../assets/fonts/icons8-base-de-datos.png'
+const Info = ({ titulo, info, icono }) => {
 
-// import { PhoneIcon} from '@chakra-ui/icons'
+const estiloiconos = {
 
+color:'white',
+fontSize:'.9rem'
 
-const Info = ({ titulo, info }) => {
+}
+
   return (
     <Box>
       <Text as="h3" color='#AA8C55' mb='.2rem'>{titulo}</Text>
-      <Flex>
-        <Image src={icono} width='5' mr='.3rem'/>
+      <Flex textAlign='center' gap='.3rem'>
+        <i class={icono} style={estiloiconos} ></i>
         <Text color='#878787' fontSize='.8rem'>{info}</Text>
       </Flex>
     </Box>
