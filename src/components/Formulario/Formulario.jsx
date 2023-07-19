@@ -1,7 +1,11 @@
-import { Box, Input, Flex, Button } from "@chakra-ui/react";
-import React from "react";
+import { Input, Flex, Button, FormControl } from "@chakra-ui/react";
+
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Formulario = () => {
+
+// ---------estilos---------
   const estiloinput = {
     "::placeholder": {
       color: "#878787",
@@ -13,8 +17,40 @@ const Formulario = () => {
     pt: ".5rem",
   };
 
+// ----------onclick------------
+  //   const form = useRef();
+
+  //   const sendEmail = (e) => {
+  //     e.preventDefault();
+  
+  //     emailjs.sendForm("service_k4zfbjj", "template_ipjwhic", form.current, "V18aLKRn9J-CT3iC7")
+  //       .then((result) => {
+  //           console.log(result.text);
+  //       }, (error) => {
+  //           console.log(error.text);
+  //       });
+  //       console.log('se clickeo');
+
+  // }
+
+  const refForm = useRef();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const serviceId = "service_k4zfbjj";
+    const templateId = "template_ipjwhic";
+
+    const apiKey = "V18aLKRn9J-CT3iC7";
+
+    emailjs.sendForm(serviceId, templateId, refForm.current,apiKey)
+    .then( result => console.log(result.text))
+    .catch(error=>console.error(error))
+
+  }
+
   return (
-    <Box width="58%">
+    <FormControl as="formulario" width="58%" ref={refForm} onSubmit={handleSubmit}> 
       <Flex gap=".8rem" mb="1rem">
         <Input
           placeholder="Nombre"
@@ -22,6 +58,8 @@ const Formulario = () => {
           width="auto"
           sx={estiloinput}
           pb= ".5rem"
+          name="user_name"
+          isRequired
         />
         <Input
           placeholder="Email"
@@ -29,6 +67,8 @@ const Formulario = () => {
           width="68%"
           sx={estiloinput}
           pb='.5rem'
+          name="user_email"
+          isRequired
         />
       </Flex>
 
@@ -38,6 +78,8 @@ const Formulario = () => {
         mb="1rem"
         sx={estiloinput}
         pb='.5rem'
+        name="from_name"
+        isRequired
       />
       <Input
         placeholder="Mensaje"
@@ -45,17 +87,22 @@ const Formulario = () => {
         mb="1rem"
         sx={estiloinput}
         pb='5rem'
+        name="message"
+        isRequired
       />
       <Button
+        variant="unstyled"
         bg="#AA8C55"
         color="white"
         p=".5rem 2.5rem"
-        borderRadius=".2rem"
+        borderRadius=".1rem"
         border="1px #AA8C55 solid"
+       
+       
       >
         Enviar
       </Button>
-    </Box>
+    </FormControl>
   );
 };
 

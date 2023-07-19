@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
-// import { Boton } from "../../components";
 
 import Escritorio from "../../assets/img/Escritorio.jpg";
 
@@ -28,7 +27,7 @@ const Inicio = () => {
     pr : '1rem',
     pl : '1rem',
     fontSize : '.9rem',
-    mr:'.7rem'
+    mr:'.7rem',
   };
 
   const botoncontratame = {
@@ -40,6 +39,7 @@ const Inicio = () => {
     pr : '1rem',
     pl : '1rem',
     fontSize : '.9rem',
+    
 
   }
 
