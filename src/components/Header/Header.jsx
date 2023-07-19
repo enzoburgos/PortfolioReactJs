@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
 
-import { Formulario, Logo, Navbar } from "../../components";
+import { Formulario, Logo, Menu, Navbar } from "../../components";
 
 import { CloseIcon } from "@chakra-ui/icons";
 
@@ -11,7 +11,7 @@ const Header = () => {
   const estiloheader = {
     height: "3.5rem",
     bg: "#181818",
-    display: "flex",
+    display:'flex',
     alignItems: "center",
     position: "fixed",
     width: "100%",
@@ -19,7 +19,12 @@ const Header = () => {
     pr: "5.5rem",
     pl: "5.5rem",
     zIndex: "300",
+    
+    // display:'{{base:none ,md:block}}'
   };
+  const responsiveheader = {
+    display:{base:"none", md:"block" ,xl:'none'}
+  }
 
   const estiloboton = {
     color: "white",
@@ -86,27 +91,35 @@ const Header = () => {
     document.body.style.overflow = "auto";
   };
 
+// -----------responsive------------
+
+
   return (
-    <Box as="header" sx={estiloheader}>
-      <Logo />
-      <Flex alignItems="center">
-        <Navbar />
-        <Button variant="unstyled" sx={estiloboton} onClick={botoncontactame}>
-          Contáctame
-        </Button>
-        {mostrarFormulario && (
-          <Box sx={estilobgform}>
-            <Box sx={estilocontform}>
-              <CloseIcon sx={estiloiconocerrar} onClick={iconocerrar} />
-              <Text fontSize="2rem" mb="2rem" color="#878787">
-                Contactame
-              </Text>
-              <Formulario />
+    <>
+      <Box as="header" sx={{ ...responsiveheader, ...estiloheader }} >
+        <Logo />
+        <Flex alignItems="center">
+          <Navbar />
+          <Button variant="unstyled" sx={estiloboton} onClick={botoncontactame}>
+            Contáctame
+          </Button>
+          {mostrarFormulario && (
+            <Box sx={estilobgform}>
+              <Box sx={estilocontform}>
+                <CloseIcon sx={estiloiconocerrar} onClick={iconocerrar} />
+                <Text fontSize="2rem" mb="2rem" color="#878787">
+                  Contactame
+                </Text>
+                <Formulario />
+              </Box>
             </Box>
-          </Box>
-        )}
-      </Flex>
-    </Box>
+          )}
+        </Flex>
+      </Box>
+      <Box display={{base:'block',md:'none'}} boxSize='10'>
+          <Menu />
+      </Box>
+    </>
   );
 };
 

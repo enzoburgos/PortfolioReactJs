@@ -16,7 +16,7 @@ const Inicio = () => {
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    // fontSize: "calc(1em + 1vw)",
+    
   };
 
   const botontrabajo = {
@@ -26,12 +26,12 @@ const Inicio = () => {
     border: "2px solid #878787",
     pr : '1rem',
     pl : '1rem',
-    fontSize : '.9rem',
     mr:'.7rem',
     transition:'all 0.5s',
     ':hover':{
       transform: 'scale(1.07)'
-    }
+    },
+    fontSize:{base:'.9rem',md:'.9rem', lg:'.9rem', xl:"2rem"} 
 
   };
 
@@ -48,19 +48,19 @@ const Inicio = () => {
     ':hover':{
       transform: 'scale(1.07)'
     }
-    
+
   }
 
   return (
     <Box id="inicio" as="section" sx={estiloinicio}>
       <Box>
-        <Text fontSize="2vw" color="white" lineHeight=".2rem">
+        <Text fontSize={{base:'5vw',md:'2vw', lg:'2vw' ,xl:"2vw"}} color="white" lineHeight=".2rem" >
           Mi Nombre es
         </Text>
-        <Text fontSize="6vw" color="white">
+        <Text fontSize={{base:'10vw',md:'6vw', lg:'6vw',xl:"6vw"}} color="white">
           Enzo Burgos
         </Text>
-        <Text fontSize="2.2vw" color="#AA8C55" mb="1.3rem">
+        <Text fontSize={{base:'4vw',md:'2.2vw', lg:'2.2vw', xl:"2.2vw"}} color="#AA8C55" mb="1.3rem">
           Soy un Full Stack Developer
         </Text>
         <Button variant="unstyled" sx={botontrabajo}>Ver Trabajos</Button>

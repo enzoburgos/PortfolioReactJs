@@ -2,6 +2,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 import perfil from "../../assets/img/fotoperf.png";
 
+
 const Sobremi = () => {
   // ---------estilos----------
   const estiloinfo = {
@@ -17,7 +18,7 @@ const Sobremi = () => {
         <Text as="h2" fontSize="25" pb="1rem">
           Sobre Mi
         </Text>
-        <Text>
+        <Text color={{base:'pink', md:'red', xl:'black' }}>
           Soy Técnico Electrónico con ganas de aprender más el mundo de la
           programación, me gusta viajar por el mundo y experimentar nuevos
           retos, tengo conocimientos y habilidades en front-end y back-end,

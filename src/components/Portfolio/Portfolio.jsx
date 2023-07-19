@@ -6,6 +6,8 @@ import proyecto1 from "../../assets/img/proyecto1.png";
 import proyecto2 from "../../assets/img/proyecto2.png";
 import proyecto3 from "../../assets/img/proyecto3.png";
 
+import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
+
 import { CloseIcon } from "@chakra-ui/icons";
 
 const Portfolio = () => {
@@ -28,6 +30,18 @@ const Portfolio = () => {
     },
   };
 
+  const contmostrarimg = {
+    top: "0",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "fixed",
+    bg: "rgba(0,0,0,0.7)",
+    width: "100vw",
+    height: "100vh",
+    zIndex: "999",
+  };
+
   // ---------usestate img---------
 
   const [mostrarImg, setMostrarImg] = useState(false);
@@ -37,10 +51,14 @@ const Portfolio = () => {
     document.body.style.overflow = "hidden";
   };
 
+
   const iconocerrar = () => {
     setMostrarImg(false);
     document.body.style.overflow = "auto";
-  };
+  }
+
+// const proyectos = ['proyecto1', 'proyecto2', 'proyecto3', 'proyecto4']
+
 
 
   return (
@@ -56,7 +74,7 @@ const Portfolio = () => {
           >
             Portfolio
           </Text>
-          <Flex justifyContent="center" mb="2.5rem" gap='.1rem'>
+          <Flex justifyContent="center" mb="2.5rem" gap=".1rem">
             <Boton text="Todos" bg="#AA8C55" color="white" />
             <Boton text="Escritorio" color="#878787" />
             <Boton text="Tablet" color="#878787" />
@@ -71,7 +89,12 @@ const Portfolio = () => {
             />
             <Image sx={estiloimg} src={proyecto2} alt="proyecto 2" />
             <Image sx={estiloimg} src={proyecto3} alt="proyecto 3" />
-            <Image sx={estiloimg} src={proyecto1} alt="proyecto 4" onClick={clickImg}/>
+            <Image
+              sx={estiloimg}
+              src={proyecto1}
+              alt="proyecto 4"
+              onClick={clickImg}
+            />
             <Image sx={estiloimg} src={proyecto2} alt="proyecto 5" />
             <Image sx={estiloimg} src={proyecto3} alt="proyecto 6" />
           </Flex>
@@ -79,18 +102,22 @@ const Portfolio = () => {
       </Box>
 
       {mostrarImg && (
-        <Box
-          top="0"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          position="fixed"
-          bg="rgba(0,0,0,0.7)"
-          width="100vw"
-          height="100vh"
-          zIndex='999'
-        >
+        <Box sx={contmostrarimg}>
+          <ArrowBackIcon
+            boxSize="3rem"
+            color="white"
+            cursor="pointer"
+            position="absolute"
+            left="10"
+          />
           <Image src={proyecto1} />
+          <ArrowForwardIcon
+            boxSize="3rem"
+            color="white"
+            cursor="pointer"
+            position="absolute"
+            right="10"
+          />
           <CloseIcon
             color="#878787"
             position="absolute"
