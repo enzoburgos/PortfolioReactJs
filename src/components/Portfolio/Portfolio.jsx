@@ -56,7 +56,7 @@ const Portfolio = () => {
           >
             Portfolio
           </Text>
-          <Flex justifyContent="center" mb="2.5rem">
+          <Flex justifyContent="center" mb="2.5rem" gap='.1rem'>
             <Boton text="Todos" bg="#AA8C55" color="white" />
             <Boton text="Escritorio" color="#878787" />
             <Boton text="Tablet" color="#878787" />

@@ -18,17 +18,25 @@ const Header = () => {
     justifyContent: "space-between",
     pr: "5.5rem",
     pl: "5.5rem",
-    zIndex:'300'
-    // ':hover': {
-    //   bg: 'lightpink',
-    // }
+    zIndex: "300",
   };
 
   const estiloboton = {
     color: "white",
     bg: "#AA8C55",
-    borderRadius: "1",
+    borderRadius: ".1rem",
     p: "0 1rem",
+    transition: "all 0.3s ease",
+    position: "relative",
+    display: "inline-block",
+    boxShadow:
+      "inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1)",
+    ":hover": {
+      bg: "black",
+    },
+    ":active": {
+      top: "2px",
+    },
   };
 
   const estilobgform = {
@@ -44,9 +52,25 @@ const Header = () => {
     "z-index": "10",
   };
 
-  // ---------------hover---------------
-  
+  const estilocontform = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    bg: "#0A0A0A",
+    height: "80vh",
+    width: "80vw",
+    fontSize: ".5rem",
+  };
 
+  const estiloiconocerrar = {
+    color: "#878787",
+    position: "absolute",
+    boxSize: "25",
+    top: "10",
+    right: "14",
+    cursor: "pointer",
+  };
 
   // ----------usestate mostrar formulario---------
 
@@ -54,13 +78,13 @@ const Header = () => {
 
   const botoncontactame = () => {
     setMostrarFormulario(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const iconocerrar = () => {
-    setMostrarFormulario(false)
-    document.body.style.overflow = 'auto';
-  }
+    setMostrarFormulario(false);
+    document.body.style.overflow = "auto";
+  };
 
   return (
     <Box as="header" sx={estiloheader}>
@@ -72,27 +96,8 @@ const Header = () => {
         </Button>
         {mostrarFormulario && (
           <Box sx={estilobgform}>
-            <Box
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-              bg="#0A0A0A"
-              height="80vh"
-              width="80vw"
-              fontSize=".5rem"
-
-            >
-              <CloseIcon
-                color="#878787"
-                position="absolute"
-                boxSize="25"
-                top="10"
-                right="14"
-                cursor="pointer"
-                onClick={iconocerrar}
-              />
-
+            <Box sx={estilocontform}>
+              <CloseIcon sx={estiloiconocerrar} onClick={iconocerrar} />
               <Text fontSize="2rem" mb="2rem" color="#878787">
                 Contactame
               </Text>

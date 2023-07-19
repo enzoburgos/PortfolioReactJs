@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <Box as="nav" pr="2rem">
+    <Box as="nav" pr="2rem" mt='.2rem'>
       <Link
         sx={estilolink}
         style={{ textDecoration: "none" }}

@@ -28,6 +28,11 @@ const Inicio = () => {
     pl : '1rem',
     fontSize : '.9rem',
     mr:'.7rem',
+    transition:'all 0.5s',
+    ':hover':{
+      transform: 'scale(1.07)'
+    }
+
   };
 
   const botoncontratame = {
@@ -39,8 +44,11 @@ const Inicio = () => {
     pr : '1rem',
     pl : '1rem',
     fontSize : '.9rem',
+    transition:'all 0.5s',
+    ':hover':{
+      transform: 'scale(1.07)'
+    }
     
-
   }
 
   return (

@@ -7,6 +7,12 @@ const Boton = ({ text, bg, color }) => {
     color: `${color}`,
     bg : `${bg}`,
     borderRadius: "2",
+    transition: "all 0.3s ease",
+    ':hover':{
+      bg:'#AA8C55',
+      color:'white'
+    }
+
   };
 
   return (
