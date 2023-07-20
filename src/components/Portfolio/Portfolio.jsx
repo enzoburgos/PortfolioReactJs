@@ -15,12 +15,13 @@ const Portfolio = () => {
   const estiloPortfolio = {
     width: "83%",
     margin: "0 auto",
-    pb: "5.5em",
+    pb: { base: "3.5em", md: "5.5em" },
   };
 
   const estiloimg = {
-    height: "38vh",
-    width: "26.5vw",
+    height: { base: "16vh", md: "38vh" },
+    width: { base: "48%", md: "26.5vw" },
+
     objectFit: "cover",
     borderRadius: "1",
     cursor: "pointer",
@@ -42,6 +43,20 @@ const Portfolio = () => {
     zIndex: "999",
   };
 
+  const titulo = {
+    fontSize: "25",
+    textAlign: "center",
+    color: "#878787",
+    mb: { base: "2rem", md: "2.5rem" },
+  };
+
+  const flexbotones = {
+    justifyContent: "center",
+    mb: "2.5rem",
+    gap: ".1rem",
+    // display: { base: "none", md: "block" },
+  };
+
   // ---------usestate img---------
 
   const [mostrarImg, setMostrarImg] = useState(false);
@@ -51,35 +66,28 @@ const Portfolio = () => {
     document.body.style.overflow = "hidden";
   };
 
-
   const iconocerrar = () => {
     setMostrarImg(false);
     document.body.style.overflow = "auto";
-  }
+  };
 
-// const proyectos = ['proyecto1', 'proyecto2', 'proyecto3', 'proyecto4']
-
-
+  // const proyectos = ['proyecto1', 'proyecto2', 'proyecto3', 'proyecto4']
 
   return (
     <>
       <Box id="portfolio" as="section" bg="#0A0A0A">
         <Box sx={estiloPortfolio}>
-          <Text
-            as="h2"
-            fontSize={25}
-            textAlign="center"
-            color="#878787"
-            mb="2.5rem"
-          >
+          <Text as="h2" sx={titulo}>
             Portfolio
           </Text>
-          <Flex justifyContent="center" mb="2.5rem" gap=".1rem">
-            <Boton text="Todos" bg="#AA8C55" color="white" />
-            <Boton text="Escritorio" color="#878787" />
-            <Boton text="Tablet" color="#878787" />
-            <Boton text="Móvil" color="#878787" />
-          </Flex>
+          <Box display={{base:'none', md:'block'}}>
+            <Flex sx={flexbotones}>
+              <Boton text="Todos" bg="#AA8C55" color="white" />
+              <Boton text="Escritorio" color="#878787" />
+              <Boton text="Tablet" color="#878787" />
+              <Boton text="Móvil" color="#878787" />
+            </Flex>
+          </Box>
           <Flex flexWrap="wrap" gap="1rem .6rem">
             <Image
               sx={estiloimg}

@@ -55,12 +55,12 @@ const Formulario = () => {
   };
 
   return (
-    <Box as="form" width="58%" ref={form} onSubmit={enviaremail}>
+    <Box as="form" ref={form} onSubmit={enviaremail}>
       <Flex gap=".8rem" mb="1rem">
         <Input
           placeholder="Nombre"
           variant="unstyled"
-          width="auto"
+          width="35%"
           sx={estiloinput}
           pb=".5rem"
           name="user_name"
@@ -68,7 +68,7 @@ const Formulario = () => {
         <Input
           placeholder="Email"
           variant="unstyled"
-          width="68%"
+          width="65%"
           sx={estiloinput}
           pb=".5rem"
           name="user_email"
@@ -78,6 +78,7 @@ const Formulario = () => {
       <Input
         placeholder="Asunto"
         variant="unstyled"
+        width="100%"
         mb="1rem"
         sx={estiloinput}
         pb=".5rem"
@@ -86,6 +87,7 @@ const Formulario = () => {
       <Input
         placeholder="Mensaje"
         variant="unstyled"
+        width="100%"
         mb="1rem"
         sx={estiloinput}
         pb="5rem"

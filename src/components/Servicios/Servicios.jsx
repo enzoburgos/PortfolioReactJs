@@ -6,9 +6,20 @@ const Servicios = () => {
   const estiloservicios = {
     width: "83%",
     margin: "0 auto",
-    pt: "5.5em",
-    pb: "5.5em",
+    pt: {base:'3.5rem', md:"5.5em"},
+    pb: {base:'3.5rem',md:"5.5em"}
   };
+
+const estiloflex = {
+
+  flexWrap:{base:'nowrap', md:'wrap'},
+  columnGap:'.9rem',
+  rowGap:'1.5rem', 
+  overflow:{base:'scroll', md:'visible'},
+  height:{base:'10%',md:'100%'},
+  width:{base:'400vw',md:'100%'}
+
+}
 
   // --------props---------
   const servicios = [
@@ -58,11 +69,11 @@ const Servicios = () => {
           fontSize={25}
           textAlign="center"
           color="#878787"
-          mb="3rem"
+          mb={{base:'1.5rem',md:"3rem"}}
         >
           Servicios
         </Text>
-        <Flex flexWrap='wrap' columnGap='.9rem' rowGap='1.5rem'>
+        <Flex sx={estiloflex}>
           {servicios.map((serv) => (
             <Card
               titulo={serv.titulo}

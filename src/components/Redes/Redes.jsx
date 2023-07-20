@@ -12,10 +12,8 @@ const Redes = () => {
 // --------estilos--------
  
 const estiloRedes = {
-    
     p: '2',
-    boxSize:'2.2rem'
-    
+    boxSize:{base:'1.8rem', md:'2.2rem'}
   };
 
   const estilolink = {

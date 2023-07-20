@@ -20,7 +20,6 @@ const Navbar = () => {
         sx={estilolink}
         style={{ textDecoration: "none" }}
         href="#inicio"
-        
       >
         Inicio
       </Link>

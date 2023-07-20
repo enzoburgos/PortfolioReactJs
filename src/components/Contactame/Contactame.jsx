@@ -5,26 +5,35 @@ import { Formulario, Info } from "../../components";
 
 const Contactame = () => {
   // ---------estilos----------
-  const estiloContactame = {
+  const contenedorcontact = {
     width: "83%",
     m: "0 auto",
   };
 
+  const titulo = {
+    fontSize: "25",
+    textAlign: "center",
+    color: "#878787",
+    mb: { base: "2rem", md: "3rem" },
+  };
+
+  const infomasform = {
+
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: { base: "column-reverse", md: "row" },
+    gap:{base:'3rem', md:'0'}
+  };
+
   return (
-    <Box as="section" bg="#0A0A0A" pb="5.5rem">
-      <Box sx={estiloContactame}>
-        <Text
-          as="h2"
-          fontSize={25}
-          textAlign="center"
-          color="#878787"
-          mb="3rem"
-        >
+    <Box as="section" bg="#0A0A0A" pb={{base:'3rem', md:"5.5rem"}}>
+      <Box sx={contenedorcontact}>
+        <Text as="h2" sx={titulo}>
           Contactame
         </Text>
 
-        <Box display="flex" justifyContent="space-between">
-          <Box display="flex" flexDirection="column" gap="2rem">
+        <Box sx={infomasform}>
+          <Box display="flex" flexDirection="column" gap={{base:'1rem', md:"2rem"}}>
             <Info
               titulo="Teléfono"
               info="+541131421804"
@@ -41,8 +50,9 @@ const Contactame = () => {
               icono="bi bi-envelope"
             />
           </Box>
-
-          <Formulario />
+          <Box width={{base:'79vw',md:'46vw'}}>
+            <Formulario />
+          </Box>
         </Box>
       </Box>
     </Box>
