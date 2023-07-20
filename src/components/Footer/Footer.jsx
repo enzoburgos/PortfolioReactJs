@@ -1,9 +1,10 @@
 import React from "react";
-
 import { Text, Box } from "@chakra-ui/react";
 import { Redes } from "../../components";
 
 const Footer = () => {
+
+  // --------estilos---------
   const estilofooter = {
     pt: "1.5rem",
     pb: "1rem",

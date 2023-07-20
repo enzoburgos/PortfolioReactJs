@@ -1,34 +1,32 @@
 import React from "react";
 import { useState } from "react";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-
 import { Formulario, Logo, Menu, Navbar } from "../../components";
-
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 const Header = () => {
 
+  
   // ----------estilos----------
   const estiloheader = {
-    height: "3.5rem",
+    height: { base: "3.5rem", xl: "6rem" },
     bg: "#181818",
     display: "flex",
     alignItems: "center",
     position: "fixed",
     width: "100%",
     justifyContent: "space-between",
-    pr: "5.5rem",
-    pl: "5.5rem",
+    pr: { base: "5.5rem", xl: "10rem" },
+    pl: { base: "5.5rem", xl: "10rem" },
     zIndex: "300",
-
   };
-
 
   const estiloboton = {
     color: "white",
     bg: "#AA8C55",
     borderRadius: ".1rem",
-    p: "0 1rem",
+    p: { base: "0 1rem", xl: ".7rem 2rem 3.7rem 1.9rem" },
+    mb: { xl: ".1rem" },
     transition: "all 0.3s ease",
     position: "relative",
     display: "inline-block",
@@ -40,6 +38,7 @@ const Header = () => {
     ":active": {
       top: "2px",
     },
+    fontSize: { base: "1rem", xl: "1.9rem" },
   };
 
   const estilobgform = {
@@ -77,7 +76,8 @@ const Header = () => {
 
   const iconomenu = {
     color: "white",
-    boxSize: "50",
+    boxSize: "30",
+    border: "transparent",
   };
 
   // ----------usestate mostrar formulario---------
@@ -94,19 +94,17 @@ const Header = () => {
     document.body.style.overflow = "auto";
   };
 
-// ---------mostrarMenu----------
+  // ---------mostrarMenu----------
 
-  const [mostrarMenu, setMostrarMenu] = useState(false);
+  const [clicked, setCliked] = useState(false);
 
-    const clickmenu = () => {
-      setMostrarMenu(true);
-      
-    };
-
+  const mostrarMenu = () => {
+    setCliked(!clicked);
+  };
 
   return (
     <>
-      <Box display={{ base: "none", md: "none" }}>
+      <Box display={{ base: "none", lg: "block" }}>
         <Box as="header" sx={estiloheader}>
           <Logo />
           <Flex alignItems="center">
@@ -132,13 +130,16 @@ const Header = () => {
           </Flex>
         </Box>
       </Box>
-      <Box display={{ base: "block", md: "block" }} position="fixed">
-        <HamburgerIcon sx={iconomenu} onClick={clickmenu}/>
-        {mostrarMenu&&(
-          <Menu />
-        )}
+      <Box
+        display={{ base: "block", lg: "none" }}
+        position="fixed"
+        zIndex="1000"
+      >
+        <Box p="1.5rem 0 0 1.5rem" bg={clicked ? "#181818" : ""}>
+          <HamburgerIcon sx={iconomenu} onClick={mostrarMenu} />
+        </Box>
+        {clicked && <Menu />}
       </Box>
-
     </>
   );
 };

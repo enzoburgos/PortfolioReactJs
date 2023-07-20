@@ -1,11 +1,10 @@
 import React from "react";
 import { Box, Button, Text } from "@chakra-ui/react";
-
 import Escritorio from "../../assets/img/Escritorio.jpg";
 
 const Inicio = () => {
 
-  
+
   // ------estilos-------
   const estiloinicio = {
     bgImage: `${Escritorio}`,
@@ -25,13 +24,13 @@ const Inicio = () => {
     bg: "transparent",
     borderRadius: ".2rem",
     border: "2px solid #878787",
-    p: {base: "0 1rem", xl:'1rem 2.5rem 3.5rem 2.5rem'},
+    p: { base: "0 1rem", xl: "1rem 2.5rem 3.5rem 2.5rem" },
     mr: ".7rem",
     transition: "all 0.5s",
     ":hover": {
       transform: "scale(1.07)",
     },
-    fontSize: { base: ".7rem", md: ".9rem", xl:'1.7rem' },
+    fontSize: { base: ".7rem", md: ".9rem", xl: "1.7rem" },
   };
 
   const botoncontratame = {
@@ -39,9 +38,9 @@ const Inicio = () => {
     bg: "#AA8C55",
     borderRadius: ".2rem",
     border: "2px solid black",
-    p: {base:'0 1rem', xl:"1rem 2.5rem 3.5rem 2.5rem"},
+    p: { base: "0 1rem", xl: "1rem 2.5rem 3.5rem 2.5rem" },
 
-    fontSize: { base: ".7rem", md: ".9rem", xl:'1.7rem'},
+    fontSize: { base: ".7rem", md: ".9rem", xl: "1.7rem" },
     transition: "all 0.5s",
     ":hover": {
       transform: "scale(1.07)",
@@ -54,7 +53,7 @@ const Inicio = () => {
         <Text
           fontSize={{ base: "4vw", md: "2.8vw", lg: "2vw", xl: "2vw" }}
           color="white"
-          lineHeight={{base:'1rem', md:'1rem', lg: ".2rem"}}
+          lineHeight={{ base: "1rem", md: "1rem", lg: ".2rem" }}
         >
           Mi Nombre es
         </Text>

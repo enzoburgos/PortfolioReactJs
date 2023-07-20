@@ -6,8 +6,8 @@ const Info = ({ titulo, info, icono }) => {
 const estiloiconos = {
 
 color:'white',
-// : {base: '.9rem', xl:'5rem'}
 pt:{xl:'10rem'}
+
 }
 
   return (

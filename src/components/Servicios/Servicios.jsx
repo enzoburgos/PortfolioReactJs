@@ -2,22 +2,22 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import { Card } from "../../components";
 
 const Servicios = () => {
+
+  
   // ---------estilos--------
   const estiloservicios = {
     width: "83%",
     margin: "0 auto",
-    pt: {base:'3.5rem', md:'4rem', xl:"6rem"},
-    pb: {base:'3.5rem', md:'4rem',xl:"6rem"}
+    pt: { base: "3.5rem", md: "4rem", xl: "6rem" },
+    pb: { base: "3.5rem", md: "4rem", xl: "6rem" },
   };
 
-const estiloflex = {
-
-  flexWrap:{base:'nowrap', md:'wrap'}, 
-  columnGap:'.9rem', 
-  rowGap:'1.5rem', 
-  overflow:{base:'auto', md:'visible'}, 
-
-}
+  const estiloflex = {
+    flexWrap: { base: "nowrap", md: "wrap" },
+    columnGap: ".9rem",
+    rowGap: "1.5rem",
+    overflow: { base: "auto", md: "visible" },
+  };
 
   // --------props---------
   const servicios = [
@@ -60,14 +60,14 @@ const estiloflex = {
   ];
 
   return (
-    <Box as="section" id="servicios" bg="#0A0A0A" >
+    <Box as="section" id="servicios" bg="#0A0A0A">
       <Box sx={estiloservicios}>
         <Text
           as="h2"
-          fontSize={{base:'25', xl:'3rem'}}
+          fontSize={{ base: "25", xl: "3rem" }}
           textAlign="center"
           color="#878787"
-          mb={{base:'1.5rem',md:"3rem"}}
+          mb={{ base: "1.5rem", md: "3rem" }}
         >
           Servicios
         </Text>

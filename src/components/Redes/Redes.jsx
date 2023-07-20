@@ -9,11 +9,12 @@ import linkedin from "../../assets/fonts/icons8-linkedin.svg";
 
 const Redes = () => {
 
-// --------estilos--------
- 
-const estiloRedes = {
-    p: '2',
-    boxSize:{base:'1.8rem', md:'2.2rem', xl:'3rem'}
+  
+  // --------estilos--------
+
+  const estiloRedes = {
+    p: "2",
+    boxSize: { base: "1.8rem", md: "2.2rem", xl: "3rem" },
   };
 
   const estilolink = {
@@ -23,20 +24,24 @@ const estiloRedes = {
   };
 
   return (
-    <Flex justifyContent="center" gap={{base:"2.2rem", xl:'3rem'}}>
+    <Flex justifyContent="center" gap={{ base: "2.2rem", xl: "3rem" }}>
       <Link sx={estilolink} isExternal href="https://github.com/enzoburgos">
         <Image src={github} sx={estiloRedes} />
       </Link>
-      <Link sx={estilolink} isExternal href='#'>
+      <Link sx={estilolink} isExternal href="#">
         <Image src={twitter} sx={estiloRedes} />
       </Link>
-      <Link sx={estilolink} isExternal href='#'>
+      <Link sx={estilolink} isExternal href="#">
         <Image src={facebook} sx={estiloRedes} />
       </Link>
-      <Link sx={estilolink} isExternal href=''>
+      <Link sx={estilolink} isExternal href="">
         <Image src={instagram} sx={estiloRedes} />
       </Link>
-      <Link sx={estilolink} isExternal href='https://www.linkedin.com/in/enzo-ivan-burgos-50334526a/'> 
+      <Link
+        sx={estilolink}
+        isExternal
+        href="https://www.linkedin.com/in/enzo-ivan-burgos-50334526a/"
+      >
         <Image src={linkedin} sx={estiloRedes} />
       </Link>
     </Flex>

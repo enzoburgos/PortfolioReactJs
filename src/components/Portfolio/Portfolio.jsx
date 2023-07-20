@@ -7,7 +7,6 @@ import proyecto2 from "../../assets/img/proyecto2.png";
 import proyecto3 from "../../assets/img/proyecto3.png";
 
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
-
 import { CloseIcon } from "@chakra-ui/icons";
 
 const Portfolio = () => {
@@ -19,8 +18,8 @@ const Portfolio = () => {
   };
 
   const estiloimg = {
-    height: { base: "16vh", md:'auto', lg: "38vh" },
-    width: { base: "48%", md:'39.9vw', lg: "26.5vw" },
+    height: { base: "16vh", md: "auto", lg: "38vh", xl: "auto" },
+    width: { base: "48%", md: "39.9vw", lg: "26.5vw", xl: "27vw" },
     objectFit: "cover",
     borderRadius: "1",
     cursor: "pointer",
@@ -43,7 +42,7 @@ const Portfolio = () => {
   };
 
   const titulo = {
-    fontSize: {base:"25", xl:'3rem'},
+    fontSize: { base: "25", xl: "3rem" },
     textAlign: "center",
     color: "#878787",
     mb: { base: "2rem", md: "2.5rem" },
@@ -53,7 +52,6 @@ const Portfolio = () => {
     justifyContent: "center",
     mb: "2.5rem",
     gap: ".1rem",
-    // display: { base: "none", md: "block" },
   };
 
   // ---------usestate img---------
@@ -70,8 +68,6 @@ const Portfolio = () => {
     document.body.style.overflow = "auto";
   };
 
-  // const proyectos = ['proyecto1', 'proyecto2', 'proyecto3', 'proyecto4']
-
   return (
     <>
       <Box id="portfolio" as="section" bg="#0A0A0A">
@@ -79,7 +75,7 @@ const Portfolio = () => {
           <Text as="h2" sx={titulo}>
             Portfolio
           </Text>
-          <Box display={{base:'none', md:'block'}}>
+          <Box display={{ base: "none", md: "block" }}>
             <Flex sx={flexbotones}>
               <Boton text="Todos" bg="#AA8C55" color="white" />
               <Boton text="Escritorio" color="#878787" />
