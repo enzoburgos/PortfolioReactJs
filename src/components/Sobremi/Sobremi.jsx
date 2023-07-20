@@ -8,7 +8,12 @@ const Sobremi = () => {
     bg: "#181818",
     color: "#878787",
     width: { base: "100%", md: "50%" },
-    p: { base: "2rem", md: "5.5rem 6rem 6rem 5.5rem" },
+    p: {
+      base: "2rem",
+      md: "4rem",
+      lg: "5.5rem 6rem 6rem 5.5rem",
+      xl:'10.5rem'
+    },
     textAlign: { base: "center", md: "left" },
   };
 
@@ -20,10 +25,10 @@ const Sobremi = () => {
         direction={{ base: "column-reverse", md: "row", lg: "row", xl: "row" }}
       >
         <Box sx={estiloinfo}>
-          <Text as="h2" fontSize="25" pb="1rem">
+          <Text as="h2" fontSize={{base:"25", xl:'3rem'}} pb="1rem">
             Sobre Mi
           </Text>
-          <Text>
+          <Text fontSize={{base:'1rem', xl:'2rem'}}>
             Soy Técnico Electrónico con ganas de aprender más el mundo de la
             programación, me gusta viajar por el mundo y experimentar nuevos
             retos, tengo conocimientos y habilidades en front-end y back-end,

@@ -11,10 +11,10 @@ const Contactame = () => {
   };
 
   const titulo = {
-    fontSize: "25",
+    fontSize: {base:"25", xl:'3rem'},
     textAlign: "center",
     color: "#878787",
-    mb: { base: "2rem", md: "3rem" },
+    mb: { base: "2rem", md:'2.5rem', xl: "3rem" },
   };
 
   const infomasform = {
@@ -22,7 +22,8 @@ const Contactame = () => {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: { base: "column-reverse", md: "row" },
-    gap:{base:'3rem', md:'0'}
+    gap:{base:'3rem', md:'0'},
+    mb:{xl:'3rem'}
   };
 
   return (

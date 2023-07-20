@@ -15,13 +15,12 @@ const Portfolio = () => {
   const estiloPortfolio = {
     width: "83%",
     margin: "0 auto",
-    pb: { base: "3.5em", md: "5.5em" },
+    pb: { base: "3.5em", lg: "5.5em" },
   };
 
   const estiloimg = {
-    height: { base: "16vh", md: "38vh" },
-    width: { base: "48%", md: "26.5vw" },
-
+    height: { base: "16vh", md:'auto', lg: "38vh" },
+    width: { base: "48%", md:'39.9vw', lg: "26.5vw" },
     objectFit: "cover",
     borderRadius: "1",
     cursor: "pointer",
@@ -44,7 +43,7 @@ const Portfolio = () => {
   };
 
   const titulo = {
-    fontSize: "25",
+    fontSize: {base:"25", xl:'3rem'},
     textAlign: "center",
     color: "#878787",
     mb: { base: "2rem", md: "2.5rem" },

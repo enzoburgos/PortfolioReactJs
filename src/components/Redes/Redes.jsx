@@ -13,7 +13,7 @@ const Redes = () => {
  
 const estiloRedes = {
     p: '2',
-    boxSize:{base:'1.8rem', md:'2.2rem'}
+    boxSize:{base:'1.8rem', md:'2.2rem', xl:'3rem'}
   };
 
   const estilolink = {
@@ -23,7 +23,7 @@ const estiloRedes = {
   };
 
   return (
-    <Flex justifyContent="center" gap="2.2rem">
+    <Flex justifyContent="center" gap={{base:"2.2rem", xl:'3rem'}}>
       <Link sx={estilolink} isExternal href="https://github.com/enzoburgos">
         <Image src={github} sx={estiloRedes} />
       </Link>

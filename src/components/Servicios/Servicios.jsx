@@ -6,18 +6,16 @@ const Servicios = () => {
   const estiloservicios = {
     width: "83%",
     margin: "0 auto",
-    pt: {base:'3.5rem', md:"5.5em"},
-    pb: {base:'3.5rem',md:"5.5em"}
+    pt: {base:'3.5rem', md:'4rem', xl:"6rem"},
+    pb: {base:'3.5rem', md:'4rem',xl:"6rem"}
   };
 
 const estiloflex = {
 
-  flexWrap:{base:'nowrap', md:'wrap'},
-  columnGap:'.9rem',
+  flexWrap:{base:'nowrap', md:'wrap'}, 
+  columnGap:'.9rem', 
   rowGap:'1.5rem', 
-  overflow:{base:'scroll', md:'visible'},
-  height:{base:'10%',md:'100%'},
-  width:{base:'400vw',md:'100%'}
+  overflow:{base:'auto', md:'visible'}, 
 
 }
 
@@ -66,7 +64,7 @@ const estiloflex = {
       <Box sx={estiloservicios}>
         <Text
           as="h2"
-          fontSize={25}
+          fontSize={{base:'25', xl:'3rem'}}
           textAlign="center"
           color="#878787"
           mb={{base:'1.5rem',md:"3rem"}}
